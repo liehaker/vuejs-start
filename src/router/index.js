@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "Login",
+    component: Login
   },
   {
     path: "/about",
@@ -18,6 +18,22 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/home",
+    name: "Home",
+    component: () => import("../views/Home.vue"),
+    children: [
+      {
+        path: "/Content", //Home/Content
+        component: () => import("../views/test.vue")
+      },
+      {
+        //FIXME: 잘못된 경로 들어왔을때 빈화면 안보려주려
+        path: "",
+        component: () => import("@/components/blank.vue")
+      }
+    ]
   }
 ];
 
