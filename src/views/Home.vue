@@ -39,7 +39,6 @@ export default {
   text-align: center;
 }
 .card {
-  /* Add shadows to create the "card" effect */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 10px 10px;
@@ -49,7 +48,6 @@ export default {
   padding: 10px 10px;
 }
 
-/* Add some padding inside the card container */
 .container {
   padding: 2px 10px;
 }

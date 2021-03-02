@@ -3,10 +3,21 @@
     <div class="container">
       <h1 class="txt-center">member login</h1>
       <label for="uname"><b>아이디</b></label
-      ><input v-model="userid" name="uname" type="text" required />
+      ><input
+        v-model="userid"
+        name="uname"
+        type="text"
+        placeholder="아무거나 입력하세요."
+        required
+      />
 
       <label for="psw"><b>pasword</b></label
-      ><input v-model="passwd" name="psw" type="password" />
+      ><input
+        v-model="passwd"
+        name="psw"
+        type="password"
+        placeholder="아무거나 입력하세요."
+      />
 
       <button type="submit" @click="login">Login</button>
     </div>
